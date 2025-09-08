@@ -1,0 +1,24 @@
+
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+    def start_engine(self):
+        return f"{self.name}: Engine started (from Vehicle)"
+
+class Car(Vehicle):
+    def start_engine(self):
+        return f"{self.name}: Car engine roars to life!"
+
+class Bike(Vehicle):
+    def start_engine(self):
+        return f"{self.name}: Bike engine purrs softly!"
+
+if __name__ == "__main__":
+    v = Vehicle("Generic Vehicle")
+    c = Car("mustang")
+    b = Bike("Mountain Bike")
+
+    print(v.start_engine())  
+    print(c.start_engine())  
+    print(b.start_engine())
