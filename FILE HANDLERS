@@ -1,0 +1,49 @@
+#MERCY CHIGABA
+#R257609H
+
+from abc import ABC, abstractmethod
+
+# Abstract base class
+class FileHandler(ABC):
+    @abstractmethod
+    def read(self, file_path):
+        pass
+
+    @abstractmethod
+    def write(self, file_path, data):
+        pass
+
+class TextFileHandler(FileHandler):
+    def read(self, file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        print(f"Read from text file: {content}")
+        return content
+
+    def write(self, file_path, data):
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(data)
+        print(f"Wrote to text file: {data}")
+
+class BinaryFileHandler(FileHandler):
+    def read(self, file_path):
+        with open(file_path, 'rb') as f:
+            content = f.read()
+        print(f"Read from binary file: {content}")
+        return content
+
+    def write(self, file_path, data):
+        with open(file_path, 'wb') as f:
+            f.write(data)
+        print(f"Wrote to binary file: {data}")
+
+
+if __name__ == "__main__":
+    text_handler = TextFileHandler()
+    text_handler.write('example.txt', 'Hello, world!')
+    text_handler.read('example.txt')
+
+    # Binary file handler example
+    binary_handler = BinaryFileHandler()
+    binary_handler.write('example.bin', b'\x00\x01\x02')
+    binary_handler.read('example.bin')
