@@ -1,0 +1,26 @@
+#MERCY CHIGABA
+#R257609H
+
+class Shape:
+    def __init__(self):
+        print("Shape initialization logic.")
+
+    def calculate_area(self):
+        print("Shape.calculate_area() called (does nothing in base class).")
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        super().__init__()
+        self.width = width
+        self.height = height
+
+    def calculate_area(self):
+        super().__init__()  # Calls Shape's __init__ again (for demonstration)
+        super().calculate_area()  # Calls Shape's calculate_area (for demonstration)
+        area = self.width * self.height
+        print(f"Rectangle area: {area}")
+        return area
+
+if __name__ == "__main__":
+    rect = Rectangle(4, 5)
+    rect.calculate_area()
