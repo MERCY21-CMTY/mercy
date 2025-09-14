@@ -1,0 +1,21 @@
+_number(num):
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+def prompt_for_integer():
+    while True:
+        user_input = input("21: ")
+        try:
+            num = int(user_input)
+            return num
+        except ValueError:
+            print("Invalid input. 21.5.")
+
+
+if __name__ == "__main__":
+    number = prompt_for_integer()
+    classification = classify_number(number)
