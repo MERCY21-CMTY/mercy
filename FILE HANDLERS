@@ -37,13 +37,9 @@ class BinaryFileHandler(FileHandler):
             f.write(data)
         print(f"Wrote to binary file: {data}")
 
-
 if __name__ == "__main__":
     text_handler = TextFileHandler()
     text_handler.write('example.txt', 'Hello, world!')
     text_handler.read('example.txt')
 
-    # Binary file handler example
-    binary_handler = BinaryFileHandler()
-    binary_handler.write('example.bin', b'\x00\x01\x02')
-    binary_handler.read('example.bin')
+   
