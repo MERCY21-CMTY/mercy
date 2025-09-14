@@ -1,0 +1,19 @@
+def divide_numbers(numerator, denominator):
+    try:
+        result = numerator / denominator
+        print(f"The result is: {result}")
+        return result
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero.")
+        return None
+    except TypeError:
+        print("Error: Invalid input types.10,20,40.")
+        return None
+
+divide_numbers(20, 2)
+
+divide_numbers(20, 0)
+
+divide_numbers("20", 2)
+
+divide_numbers("20", "2")
