@@ -1,0 +1,22 @@
+What is an API? Explain how to make a GET request to an API using the requests
+library in Python.
+· Explain how to connect to a SQLite database using Python. Describe the
+steps involved and the purpose of each step.?
+
+API- is a set of rules and proocols that allows different software apllications to communicte with each other.
+
+HOW TO MAKE A GET REQUESTUSING REQUEST USING REQUEST IN PYTHON?
+1. Install the request library(if not installed)
+2. Import the library and make a GET request.
+import request
+url = "https://jsonplaceholder.typicode.com/posts"
+data = response. json()
+  print(data)
+
+c.) How to connect to a SQLite data base using python?
+-Import the sqlite3 module -this makes the sqlite function to be available.
+- Connect to the database- this opens the database file and returns a connection object.
+-Create a cursor object - this is used to execute SQL statements and fetch results.
+-Execute SQL commands - allows you to create tables, data,query,etc.
+-commit changes( if you made changes)-serves changes to the database.
+Close the connetion- this frees up resources and closes the database connection.
