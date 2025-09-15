@@ -1,6 +1,3 @@
-class NegativeNumberError(Exception):
-    """Custom exception raised when a negative number is encountered."""
-    pass
 
 def check_positive(number):
     """
